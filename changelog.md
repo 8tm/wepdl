@@ -3,6 +3,9 @@
 - Added to method drawLine option "thickness" - default is set to 1px
 - Changed wepdl screen
 - Updated changelog
+- Updated REAMDE.md
+- Added datasheets of parts and firmware for 4.3" display
+
 
 ## 0.1 - 2018/01/06
 - First "dirty" release
