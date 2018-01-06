@@ -1,4 +1,4 @@
-## 0.1 - 2018/01/06
+## 0.2 - 2018/01/06
 - Changed names of variables, methods etc
 - Added to method drawLine option "thickness" - default is set to 1px
 - Changed wepdl screen
