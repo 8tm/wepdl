@@ -51,15 +51,147 @@ Location : waveshare-epd-library/waweshare_epd_example/waweshare_epd_example.ino
 
 ---
 
-### Code examples
+## Code examples
+
+This information will be placed ultimately in the Wiki.
 
 This library was created using oryginal library from Waveshare ( epd.cpp and epd.h ).
 
+---
+
+### Creating new class object
+
 ```
 
-TO DO :(
+#include "wepdl.h"
+//----------------------------------------------------------------------------------------------------------------------
+//         PIN     Nodemcu v3 (lolin) | Arduino UNO |
+//----------------------------------------------------------------------------------------------------------------------
+#define    RX      D7 // ( GPIO13 )   |    10       |
+#define    TX      D8 // ( GPIO15 )   |    11       |
+#define    WAKEUP  D6 // ( GPIO12 )   |     2       |
+#define    RESET   D5 // ( GPIO14 )   |     3       |
+//----------------------------------------------------------------------------------------------------------------------
+wepdl * EPD = new wepdl( RX, TX, WAKEUP, RESET );
 
 ```
+
+---
+
+### Using object
+
+```
+
+EPD->initialize();                     // Initialize comunication with device
+EPD->wakeUp();                         // Wake up device
+EPD->reset();                          // Reset device
+EPD->setMemory     ( MICROSD );        // Set memory to MICROSD    (    MICROSD / FLASH )
+EPD->rotateScreen  ( VERTICAL );       // Set rotation to VERTICAL ( HORIZONTAL / VERTICAL )
+EPD->clearScreen();                    // Clear screen
+```
+---
+
+### Defined variables
+
+```
+
+// Memory
+#define    FLASH          0
+#define    MICROSD        1
+
+// Screen rotation
+#define    HORIZONTAL     0
+#define    VERTICAL       1
+
+// Languages
+#define    ENGLISH        0x1E
+#define    CHINESE        0x1F
+
+// Font sizes
+#define    SIZE32         0x01
+#define    SIZE48         0x02
+#define    SIZE64         0x03
+
+// Colors
+#define    BLACK          0x00
+#define    DARK           0x01
+#define    LIGHT          0x02
+#define    WHITE          0x03
+```
+
+---
+
+### Methods description
+
+
+
+#### initialize ( void )
+
+#### goSleep ( void )
+
+#### handShake ( void )
+
+#### reset ( void )
+
+#### wakeUp ( void )
+
+#### readBaud ( void )
+
+#### clearScreen ( void )
+
+#### rotateScreen ( unsigned char mode )
+
+#### updateScreen ( void )
+
+#### setBaud ( long baud )
+
+#### setColor ( unsigned char color, unsigned char background_color, bool global_color = true )
+
+#### setFont ( unsigned char font, unsigned char language = ENGLISH )
+
+#### setMemory ( unsigned char mode )
+
+#### displayBitmap ( int x, int y, const void * p )
+
+#### displayCharacter( int x, int y, unsigned char ch )
+
+#### displayText ( int x, int y, const void * p )
+
+#### Picture ( void )
+
+#### FontLoad ( void )
+
+#### drawPixel ( int x, int y )
+
+#### drawLine ( int A_x, int A_y, int B_x, int B_y, int thickness = 1 )
+
+#### drawCircle ( int x, int y, int radius, bool fill = false )
+
+#### drawRing ( int x, int y, int radius, int border, unsigned char color, unsigned char background_color )
+
+#### drawTriangle ( int A_x, int A_y, int B_x, int B_y, int C_x, int C_y, bool fill = false )
+
+#### drawRectangle ( int A_x, int A_y, int C_x, int C_y, bool fill = false )
+
+---
+
+### Drawning and displaing elements
+
+```
+
+EPD->displayBitmap ( 0, 400, "M001.BMP" );      // Display bitmap
+
+
+```
+
+### Updating screen
+
+```
+
+EPD->updateScreen();          // Update screen and display everything from last Screen update
+EPD->goSleep();               // Go to sleep mode
+```
+
 
 ---
 
