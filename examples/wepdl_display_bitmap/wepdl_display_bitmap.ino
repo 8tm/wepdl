@@ -1,6 +1,6 @@
 // =====================================================================================================================
 //
-//    File             :  wepdl_ring.ino
+//    File             :  waveshare_epd_example.ino
 //    Tested on        :  Arduino-IDE (1.8.2 & 1.9.0 Beta31), Arduino Uno/Nano; Lolin Nodemcu v3, Wemos D1 mini
 //    Library Version  :  0.2
 //    Created by       :  Tadeusz Miszczyk (tadeusz.miszczyk[at]gmail.com)
@@ -19,18 +19,17 @@ wepdl * EPD = new wepdl( RX, TX, WAKEUP, RESET );
 //---------------------------------------------------------------------------------------------------------------------- 
 void setup()
 {
-    EPD->initialize();                                    // Initialize comunication with device
-    EPD->wakeUp();                                        // Wake up device
-    EPD->reset();                                         // Reset device
-    EPD->rotateScreen  ( VERTICAL );                      // Set rotation to VERTICAL ( HORIZONTAL / VERTICAL )
-    EPD->clearScreen();                                   // Clear screen
+    EPD->initialize();                                         // Initialize comunication with device
+    EPD->wakeUp();                                             // Wake up device
+    EPD->reset();                                              // Reset device
+    EPD->setMemory     ( FLASH );                              // Set memory to FLASH (MICROSD / FLASH)
+    EPD->rotateScreen  ( HORIZONTAL );                         // Set rotation to VERTICAL (HORIZONTAL / VERTICAL)
+    EPD->clearScreen();                                        // Clear screen
 
-    EPD->drawRing( 300, 400, 300, 20, LIGHT, WHITE );     // Draw ring with border = 15 px using predefined colors (X, Y, R, BORDER, COLOR, BKCOLOR)
-    EPD->drawRing( 300, 600,  50, 35, DARK,  WHITE );     // Draw ring with border = 35 px using predefined colors (X, Y, R, BORDER, COLOR, BKCOLOR)
-    EPD->drawRing( 500, 400,  50, 15, DARK,  LIGHT );     // Draw ring with border = 15 px using predefined colors (X, Y, R, BORDER, COLOR, BKCOLOR)
+    EPD->displayBitmap ( 0, 0, "PIC4.BMP" );                   // Display bitmap from FLASH ( max 10 uppercase chars in name, including ".BMP" )
 
-    EPD->updateScreen();                                  // Update screen
-    EPD->goSleep();                                       // Go to Sleep mode ( use wakeUp() before next work with display )
+    EPD->updateScreen();                                       // Update screen
+    EPD->goSleep();                                            // Go to Sleep mode ( use wakeUp() before next work with display )
 }
 //---------------------------------------------------------------------------------------------------------------------- 
 void loop(){}
