@@ -1,6 +1,6 @@
 // =====================================================================================================================
 //
-//    File             :  waveshare_epd_example.ino
+//    File             :  wepdl_display_bitmap.ino
 //    Tested on        :  Arduino-IDE (1.8.2 & 1.9.0 Beta31), Arduino Uno/Nano; Lolin Nodemcu v3, Wemos D1 mini
 //    Library Version  :  0.2
 //    Created by       :  Tadeusz Miszczyk (tadeusz.miszczyk[at]gmail.com)
@@ -27,6 +27,7 @@ void setup()
     EPD->clearScreen();                                        // Clear screen
 
     EPD->displayBitmap ( 0, 0, "PIC4.BMP" );                   // Display bitmap from FLASH ( max 10 uppercase chars in name, including ".BMP" )
+                                                               // displayBitmap ( X_POSITION, Y_POSITION, "FILENA.BMP" )
 
     EPD->updateScreen();                                       // Update screen
     EPD->goSleep();                                            // Go to Sleep mode ( use wakeUp() before next work with display )
