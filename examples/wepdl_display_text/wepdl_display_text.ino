@@ -19,12 +19,11 @@ wepdl * EPD = new wepdl( RX, TX, WAKEUP, RESET );
 //---------------------------------------------------------------------------------------------------------------------- 
 void setup()
 {
-    EPD->initialize();                                         // Initialize comunication with device
-    EPD->wakeUp();                                             // Wake up device
-    EPD->reset();                                              // Reset device
-    EPD->setMemory     ( FLASH );                              // Set memory to FLASH (MICROSD / FLASH)
-    EPD->rotateScreen  ( HORIZONTAL );                         // Set rotation to VERTICAL (HORIZONTAL / VERTICAL)
-    EPD->clearScreen();                                        // Clear screen
+    EPD->initialize();                                   // Initialize comunication with device
+    EPD->wakeUp();                                       // Wake up device
+    EPD->reset();                                        // Reset device
+    EPD->rotateScreen  ( HORIZONTAL );                   // Set rotation to VERTICAL (HORIZONTAL / VERTICAL)
+    EPD->clearScreen();                                  // Clear screen
     
     // ENGLISH FONT:
     EPD->setFont(SIZE32, ENGLISH);                       // Set font size = 32 and set (from now) English font 
@@ -42,21 +41,21 @@ void setup()
 
     buff[4] = '3';
     buff[5] = '2';
-    EPD->setFont(SIZE32, CHINESE);           // Set font size = 32 and set (from now) Chinese font 
-    EPD->displayText(100, 300, buff);        // Display buff text on X_POSITION=100 and Y_POSITION = 300
+    EPD->setFont(SIZE32, CHINESE);                       // Set font size = 32 and set (from now) Chinese font 
+    EPD->displayText(100, 300, buff);                    // Display buff text on X_POSITION=100 and Y_POSITION = 300
 
     buff[4] = '4';
     buff[5] = '8';
-    EPD->setFont(SIZE48);                    // Set font size = 48 (font is still Chinese)
-    EPD->displayText(100, 350, buff);        // Display buff text on X_POSITION=100 and Y_POSITION = 350
+    EPD->setFont(SIZE48);                                // Set font size = 48 (font is still Chinese)
+    EPD->displayText(100, 350, buff);                    // Display buff text on X_POSITION=100 and Y_POSITION = 350
 
     buff[4] = '6';
     buff[5] = '4';
-    EPD->setFont(SIZE64);                    // Set font size = 48 (font is still Chinese)
-    EPD->displayText(100, 410, buff);        // Display buff text on X_POSITION=100 and Y_POSITION = 410
+    EPD->setFont(SIZE64);                                // Set font size = 48 (font is still Chinese)
+    EPD->displayText(100, 410, buff);                    // Display buff text on X_POSITION=100 and Y_POSITION = 410
 
-    EPD->updateScreen();                                       // Update screen
-    EPD->goSleep();                                            // Go to Sleep mode ( use wakeUp() before next work with display )
+    EPD->updateScreen();                                 // Update screen
+    EPD->goSleep();                                      // Go to Sleep mode ( use wakeUp() before next work with display )
 }
 //---------------------------------------------------------------------------------------------------------------------- 
 void loop(){}
