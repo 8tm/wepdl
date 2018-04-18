@@ -27,13 +27,13 @@ void setup()
     EPD->clearScreen();                                        // Clear screen
     
     // ENGLISH FONT:
-    EPD->setFont(SIZE32, ENGLISH);                     // Set font size = 32 and set (from now) English font 
+    EPD->setFont(SIZE32, ENGLISH);                       // Set font size = 32 and set (from now) English font 
     EPD->displayText(100, 100, "SIZE32: Hello, World!"); // Display text on X_POSITION=100 and Y_POSITION = 100
     
-    EPD->setFont(SIZE48);                              // Set font size = 48 (font is still English)
+    EPD->setFont(SIZE48);                                // Set font size = 48 (font is still English)
     EPD->displayText(100, 150, "SIZE48: Hello, World!"); // Display text on X_POSITION=100 and Y_POSITION = 150
     
-    EPD->setFont(SIZE64);                              // Set font size = 64 (font is still English)
+    EPD->setFont(SIZE64);                                // Set font size = 64 (font is still English)
     EPD->displayText(100, 210, "SIZE64: Hello, World!"); // Display text on X_POSITION=100 and Y_POSITION = 210
 
     // CHINESE FONT:
