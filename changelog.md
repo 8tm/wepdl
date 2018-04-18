@@ -1,3 +1,11 @@
+## 0.2 - 2018/04/18
+- Changed directory structure
+- Added new full examples
+- Moved (some deleted) informations from README.md to Wiki pages
+
+## 0.2 - 2018/04/17
+- Added informations from README.md to Wiki pages
+
 ## 0.2 - 2018/01/06
 - Changed names of variables, methods etc
 - Added to method drawLine option "thickness" - default is set to 1px
