@@ -1,9 +1,9 @@
 # waveshare-epd-library (wepdl)
 
 Waveshare Electronic Paper Display Library Class
+(repository transfered from old account - tmseth)
 
-
-All informations on Wiki page : [https://github.com/tmseth/waveshare-epd-library/wiki]
+All informations on Wiki page : [https://github.com/8tm/waveshare-epd-library/wiki]
 
 
 <img src="wepdl_screen.jpg" />

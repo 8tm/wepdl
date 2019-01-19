@@ -4,22 +4,22 @@
 //    Tested on        :  Arduino-IDE (1.8.2 & 1.9.0 Beta31), Arduino Uno/Nano; Lolin Nodemcu v3, Wemos D1 mini
 //    Library Version  :  0.2
 //    Created by       :  Tadeusz Miszczyk (tadeusz.miszczyk[at]gmail.com)
-//    Library & HowTo  :  https://github.com/tmseth/waveshare-epd-library
-//    Last changes     :  20018-04-18
+//    Library & HowTo  :  https://github.com/8tm/waveshare-epd-library
+//    Last changes     :  2018-04-18
 //
 // =====================================================================================================================
 #include "wepdl.h"
-//---------------------------------------------------------------------------------------------------------------------- 
+//----------------------------------------------------------------------------------------------------------------------
 #define    RX      D7
 #define    TX      D8
 #define    WAKEUP  D6
 #define    RESET   D5
-//---------------------------------------------------------------------------------------------------------------------- 
+//----------------------------------------------------------------------------------------------------------------------
 wepdl * EPD = new wepdl( RX, TX, WAKEUP, RESET );
-//---------------------------------------------------------------------------------------------------------------------- 
+//----------------------------------------------------------------------------------------------------------------------
 String TITLE   = "wepdl",
        RELEASE = "Release : 2018-04-18  [ version 0.2 ]";
-//---------------------------------------------------------------------------------------------------------------------- 
+//----------------------------------------------------------------------------------------------------------------------
 void setup()
 {
     EPD->initialize();                                         // Initialize comunication with device
@@ -30,31 +30,31 @@ void setup()
     EPD->clearScreen();                                        // Clear screen
 
     wepdlScreen();                                             // Draw wepdl screen
-    
+
     EPD->updateScreen();                                       // Update screen
     EPD->goSleep();                                            // Go to Sleep mode ( use wakeUp() before next work with display )
 }
-//---------------------------------------------------------------------------------------------------------------------- 
+//----------------------------------------------------------------------------------------------------------------------
 void loop(){}
-//---------------------------------------------------------------------------------------------------------------------- 
+//----------------------------------------------------------------------------------------------------------------------
 void wepdlScreen()
 {
     background();                                              // Draw own background
 
     for ( int i = 70; i <= 750; i = i+50 )                     // Simple lines effect
         EPD->drawLine( 0, i - 15, 600, i + 15, 2 );            // Draw line with thickness = 2
-    
+
     EPD->setColor     ( BLACK, WHITE );                        // Set global color and background color (WHITE/LIGHT/DARK/BLACK)
     EPD->drawRing     ( 300, 400, 300, 15, LIGHT, WHITE );     // Draw main ring on lines effect
 
     EPD->setColor     ( BLACK, WHITE );                        // Set global color and background color (WHITE/LIGHT/DARK/BLACK)
     EPD->drawCircle   ( 100, 400, 50, true );                  // Draw filled circle (using global colors)     (X, Y, R, FILL (true/false) )
-    EPD->drawCircle   ( 300, 200, 50 );                        // Draw empty circle  (using global colors) 
-    EPD->drawCircle   ( 310, 210, 50 );                        // Draw empty circle  (using global colors) 
+    EPD->drawCircle   ( 300, 200, 50 );                        // Draw empty circle  (using global colors)
+    EPD->drawCircle   ( 310, 210, 50 );                        // Draw empty circle  (using global colors)
 
     EPD->drawRing     ( 300, 600, 50, 35, DARK,  WHITE );      // Draw ring with border = 35 px using predefined colors (X, Y, R, BORDER, COLOR, BKCOLOR)
     EPD->drawRing     ( 500, 400, 50, 15, LIGHT, WHITE );      // Draw ring with border = 15 px using predefined colors (X, Y, R, BORDER, COLOR, BKCOLOR)
-    
+
     EPD->setColor     ( BLACK, LIGHT );                        // Set global color and background color (WHITE/LIGHT/DARK/BLACK)
     EPD->drawRectangle( 150, 200, 200, 300 );                  // Draw empty rectangle                         ( X1, Y1, X2, Y2 )
     EPD->drawRectangle( 160, 210, 210, 310 );                  // Draw empty rectangle + 10px (left + top)     ( X1, Y1, X2, Y2 )
@@ -68,15 +68,15 @@ void wepdlScreen()
     EPD->drawLine     (  20, 130,  70, 180, 50 );
     EPD->drawLine     ( 480, 130, 530, 180, 50 );
 
-    snowman();                                                 // Draw snowman    
+    snowman();                                                 // Draw snowman
 }
-//---------------------------------------------------------------------------------------------------------------------- 
+//----------------------------------------------------------------------------------------------------------------------
 void background()
 {
     EPD->setColor     ( DARK, WHITE );                         // Set global color and background color ( WHITE / LIGHT / DARK / BLACK)
     EPD->drawRectangle( 0,   0, 600, 50, true );               // Draw filled rectangle (upper  "title" bar)
     EPD->drawRectangle( 0, 750, 600, 800, true );              // Draw filled rectangle (bottom "release info" bar)
-    
+
     EPD->setColor     ( BLACK, WHITE );                        // Set global color and background color ( WHITE / LIGHT / DARK / BLACK)
     EPD->drawLine     ( 0, 51, 600, 51, 2 );                   // Draw black line after upper bar with thickness = 2
 
@@ -85,7 +85,7 @@ void background()
     EPD->setFont      ( SIZE32 );                              // Or just change size of font (English is a default language)
     EPD->displayText  ( 260,  9, TITLE.c_str() );              // Display library name in upper bar ( Text, X, Y )
     EPD->displayText  ( 80, 759, RELEASE.c_str() );            // Display info in bottom bar ( Text, X, Y )
-    
+
     EPD->setColor     ( BLACK, WHITE );                        // Set global color and background color ( WHITE / LIGHT / DARK / BLACK)
     EPD->drawLine     ( 0, 748, 600, 748, 2 );                 // Draw black lines before bottom bar with thickness = 2
 }
@@ -94,7 +94,7 @@ void snowman()
 {
     int snX = 280,
         snY = 190;
-    
+
     for ( int i = 8; i <= 18; i++ )
     {
        EPD->drawRing ( ( snX + 20 ), ( 770 - snY - ( i * 15 ) ), ( 100 - ( 3 * i ) ), 4, DARK, LIGHT );
@@ -109,17 +109,17 @@ void snowman()
     EPD->drawRing ( snX +  40, 500 - snY, 12, 3, DARK,  WHITE );
     EPD->drawRing ( snX      , 500 - snY,  5, 2, BLACK, LIGHT );
     EPD->drawRing ( snX +  40, 500 - snY,  5, 2, BLACK, LIGHT );
- 
+
     EPD->drawRing ( snX      , 524 - snY,  5, 1, DARK,  DARK );
     EPD->drawRing ( snX +  10, 528 - snY,  5, 1, DARK,  DARK );
     EPD->drawRing ( snX +  20, 530 - snY,  5, 1, DARK,  DARK );
     EPD->drawRing ( snX +  30, 528 - snY,  5, 1, DARK,  DARK );
-    EPD->drawRing ( snX +  40, 524 - snY,  5, 1, DARK,  DARK );  
-    
-    EPD->drawLine ( snX - 70, 500 - snY, 
+    EPD->drawRing ( snX +  40, 524 - snY,  5, 1, DARK,  DARK );
+
+    EPD->drawLine ( snX - 70, 500 - snY,
                     snX - 20, 550 - snY, 5 );   // Left "arm"
 
-    EPD->drawLine ( snX +  60, 550 - snY, 
+    EPD->drawLine ( snX +  60, 550 - snY,
                     snX + 110, 500 - snY, 5 );  // Right "arm"
 }
 //----------------------------------------------------------------------------------------------------------------------

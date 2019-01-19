@@ -4,8 +4,8 @@
 //    Tested on        :  Arduino-IDE (1.8.2 & 1.9.0 Beta31), Arduino Uno/Nano; Lolin Nodemcu v3
 //    Version          :  0.2
 //    Created by       :  Tadeusz Miszczyk (tadeusz.miszczyk[at]gmail.com)
-//    Library & HowTo  :  https://github.com/tmseth/waveshare-epd-library
-//    Last changes     :  20018-01-06
+//    Library & HowTo  :  https://github.com/8tm/waveshare-epd-library
+//    Last changes     :  2018-01-06
 //
 // =====================================================================================================================
 #ifndef    WEPDL_H
