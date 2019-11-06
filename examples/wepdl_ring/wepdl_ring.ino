@@ -2,10 +2,12 @@
 //
 //    File             :  wepdl_ring.ino
 //    Tested on        :  Arduino-IDE (1.8.2 & 1.9.0 Beta31), Arduino Uno/Nano; Lolin Nodemcu v3, Wemos D1 mini
-//    Library Version  :  0.2
+//    Library Version  :  0.0.3
 //    Created by       :  Tadeusz Miszczyk (tadeusz.miszczyk[at]gmail.com)
-//    Library & HowTo  :  https://github.com/8tm/waveshare-epd-library
-//    Last changes     :  2018-04-18
+//    Library          :  https://github.com/8tm/wepdl
+//    Wiki             :  https://github.com/8tm/wepdl/wiki
+//    Last changes     :  2019-11-06
+
 //
 // =====================================================================================================================
 #include "wepdl.h"

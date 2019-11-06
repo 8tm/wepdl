@@ -1,9 +1,9 @@
-# waveshare-epd-library (wepdl)
-
-Waveshare Electronic Paper Display Library Class
+# wepdl (Waveshare Electronic Paper Display Library)
 (repository transfered from old account - tmseth)
 
-All informations on Wiki page : [https://github.com/8tm/waveshare-epd-library/wiki]
+wepdl currently support only UART display 4.3 inch (800x600 px). This library requires no other dependencies, has been simplified at the same time it has more options (like pin addressing in the project code instead of the library).
+
+All informations on Wiki page : [https://github.com/8tm/wepdl/wiki]
 
 
 <img src="wepdl_screen.jpg" />
@@ -12,9 +12,7 @@ All informations on Wiki page : [https://github.com/8tm/waveshare-epd-library/wi
 
 ## Running the tests
 
-Run Arduino-IDE, from menu "File" choice "Open" and find sketch "waweshare_epd_example.ino"
-
-Location : waveshare-epd-library/waweshare_epd_example/waweshare_epd_example.ino
+Select menu File -> Examples -> wepdl -> (some example)
 
 1) Connect your device (Arduino, Nodemcu, etc) to computer.
 

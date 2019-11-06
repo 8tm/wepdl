@@ -1,0 +1,17 @@
+{
+  "name": "wepdl",
+  "keywords": "waveshare, epd, uart, eink, library",
+  "description": "wepdl currently support only UART display 4.3 inch (800x600 px). This library requires no other dependencies, has been simplified at the same time it has more options (like pin addressing in the project code instead of the library).",
+  "homepage": "https://github.com/8tm/wepdl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/8tm/wepdl.git"
+  },
+  "version": "0.0.3",
+  "authors": {
+    "name": "Tadeusz Miszczyk",
+    "url": "https://github.com/8tm"
+  },
+  "frameworks": "arduino",
+  "platforms": "*"
+}

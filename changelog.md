@@ -1,3 +1,9 @@
+## 0.0.3 - 2019/11/06
+- Changed folder structure (matching the folder structure to the one generally adopted in Arduino libraries)
+- Changed semantic versioning convention from 2 segments to 3 segments (This change may mislead, so it is better
+  to acknowledge that previous versions did not exist and the project started from the current version 0.0.3)
+
+# ======================================== OLD SEMANTIC VERSIONING =============================================
 ## 0.2 - 2018/04/18
 - Repository transfered to new account 8tm (from tmseth)
 

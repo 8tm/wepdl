@@ -1,27 +1,18 @@
 # =====================================================================================================================
 #
 #    File             :  keywords.txt
-#    Tested on        :  Arduino-IDE (1.8.2 & 1.9.0 Beta31)
-#    Version          :  0.2
+#    Tested on        :  Arduino-IDE (1.8.2 & 1.9.0 Beta31), Arduino Uno/Nano; Lolin Nodemcu v3, Wemos D1 mini
+#    Version          :  0.0.3
 #    Created by       :  Tadeusz Miszczyk (tadeusz.miszczyk[at]gmail.com)
-#    Library & HowTo  :  https://github.com/8tm/waveshare-epd-library
-#    Last changes     :  2018-01-06
+#    Library          :  https://github.com/8tm/wepdl
+#    Wiki             :  https://github.com/8tm/wepdl/wiki
+#    Last changes     :  2019-11-06
 #
 # =====================================================================================================================
-
-
-
-
-
 
 # =====================================================================================================================
 # Syntax Coloring Map For wepdl
 # =====================================================================================================================
-
-
-
-
-
 
 # =====================================================================================================================
 # Datatypes (KEYWORD1)
@@ -29,65 +20,49 @@
 
 wepdl	KEYWORD1
 
-
-
-
-
-
 # =====================================================================================================================
 # Methods and Functions (KEYWORD2)
 # =====================================================================================================================
 
-initialize	KEYWORD2
-goSleep	KEYWORD2
-handShake	KEYWORD2
-reset	KEYWORD2
-wakeUp	KEYWORD2
-readBaud	KEYWORD2
-clearScreen	KEYWORD2
-rotateScreen	KEYWORD2
-updateScreen	KEYWORD2
-setBaud	KEYWORD2
-setColor	KEYWORD2
-setFont	KEYWORD2
-setMemory	KEYWORD2
-displayBitmap	KEYWORD2
+initialize		KEYWORD2
+goSleep			KEYWORD2
+handShake		KEYWORD2
+reset			KEYWORD2
+wakeUp			KEYWORD2
+readBaud		KEYWORD2
+clearScreen		KEYWORD2
+rotateScreen		KEYWORD2
+updateScreen		KEYWORD2
+setBaud			KEYWORD2
+setColor		KEYWORD2
+setFont			KEYWORD2
+setMemory		KEYWORD2
+displayBitmap		KEYWORD2
 displayCharacter	KEYWORD2
-displayText	KEYWORD2
-Picture	KEYWORD2
-FontLoad	KEYWORD2
-drawPixel	KEYWORD2
-drawLine	KEYWORD2
-drawCircle	KEYWORD2
-drawRing	KEYWORD2
-drawTriangle	KEYWORD2
-drawRectangle	KEYWORD2
-
-
-
-
-
+displayText		KEYWORD2
+Picture			KEYWORD2
+FontLoad		KEYWORD2
+drawPixel		KEYWORD2
+drawLine		KEYWORD2
+drawCircle		KEYWORD2
+drawRing		KEYWORD2
+drawTriangle		KEYWORD2
+drawRectangle		KEYWORD2
 
 # =====================================================================================================================
 # Constants (LITERAL1)
 # =====================================================================================================================
 
-FLASH	LITERAL1
-MICROSD	LITERAL1
+FLASH		LITERAL1
+MICROSD 	LITERAL1
 HORIZONTAL	LITERAL1
 VERTICAL	LITERAL1
-ENGLISH	LITERAL1
-CHINESE	LITERAL1
-SIZE32	LITERAL1
-SIZE48	LITERAL1
-SIZE64	LITERAL1
-WHITE	LITERAL1
-LIGHT	LITERAL1
-DARK	LITERAL1
-BLACK	LITERAL1
-
-
-
-
-
-
+ENGLISH		LITERAL1
+CHINESE 	LITERAL1
+SIZE32		LITERAL1
+SIZE48		LITERAL1
+SIZE64		LITERAL1
+WHITE		LITERAL1
+LIGHT		LITERAL1
+DARK		LITERAL1
+BLACK		LITERAL1

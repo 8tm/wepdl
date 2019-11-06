@@ -1,11 +1,12 @@
 // =====================================================================================================================
 //
-//    File             :  waveshare_epd_example.ino
-//    Tested on        :  Arduino-IDE (1.8.2 & 1.9.0 Beta31), Arduino Uno/Nano; Lolin Nodemcu v3
-//    Version          :  0.2
+//    File             :  wepdl.h
+//    Tested on        :  Arduino-IDE (1.8.2 & 1.9.0 Beta31), Arduino Uno/Nano; Lolin Nodemcu v3, Wemos d1 mini
+//    Version          :  0.0.3
 //    Created by       :  Tadeusz Miszczyk (tadeusz.miszczyk[at]gmail.com)
-//    Library & HowTo  :  https://github.com/8tm/waveshare-epd-library
-//    Last changes     :  2018-01-06
+//    Library          :  https://github.com/8tm/wepdl
+//    Wiki             :  https://github.com/8tm/wepdl/wiki
+//    Last changes     :  2019-11-06
 //
 // =====================================================================================================================
 #ifndef    WEPDL_H
@@ -150,7 +151,4 @@ class wepdl
 };
 //----------------------------------------------------------------------------------------------------------------------
 #endif
-
-
-
 
